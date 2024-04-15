@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "next-js-example",
+  "projectType": "application",
+  "sourceRoot": "examples/next-js-example",
+  "targets": {
+    "watch": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "next dev",
+          "nx watch --projects=next-js-example --includeDependentProjects -- nx run-many -t build -p \\$NX_PROJECT_NAME --exclude=next-js-example"
+        ],
+        "cwd": "examples/next-js-example",
+        "parallel": true
+      }
+    }
+  }
+}

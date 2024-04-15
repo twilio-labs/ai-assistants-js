@@ -1,0 +1,24 @@
+{
+  "name": "assistants",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "start:nextjs": "npm run dev -w next-js-example",
+    "lib-pack": "nx run-many -t lib-pack --exclude=next-js-example"
+  },
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "devDependencies": {
+    "nx": "^18.2.3",
+    "react": "18.2",
+    "react-dom": "18.2",
+    "rimraf": "^5.0.5",
+    "vitest": "^1.4.0"
+  }
+}

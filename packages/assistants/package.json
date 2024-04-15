@@ -1,0 +1,31 @@
+{
+  "name": "@twilio-alpha/assistants",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "node ../../tools/build.js src/index.ts && tsc",
+    "test": "vitest",
+    "lib-pack": "npm pack"
+  },
+  "author": "Twilio Alpha <twilio-alpha@twilio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "events": "^3.3.0",
+    "ts-pattern": "^5.0.8",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@twilio/conversations": "^2.5.0",
+    "@types/events": "^3.0.3"
+  },
+  "peerDependencies": {
+    "@twilio/conversations": "^2.5.0"
+  }
+}
